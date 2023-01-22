@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>svnsgmntdsply</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="locxter">
+        <meta name="description" content="This is a simple ESP8266-driven seven-segment display.">
+        <link rel="stylesheet" href="styles/dark.min.css">
+    </head>
+    <body>
+        <header>
+            <h1>svnsgmntdsply</h1>
+        </header>
+        <main>
+            <p>Allowed characters:</p>
+            <ul>
+                <li>Numbers (0-9)</li>
+                <li>Uppercase letters (A-Z)</li>
+                <li>Lowercase letters (a-z)</li>
+                <li>Space ( )</li>
+                <li>Underscore (_)</li>
+                <li>Hyphen-minus (-)</li>
+                <li>Equals (=)</li>
+                <li>Double quote (")</li>
+                <li>Single quote (')</li>
+                <li>Open parenthesis (()</li>
+                <li>Close parenthesis ())</li>
+                <li>Question mark (?)</li>
+            </ul>
+            <form method="post">
+                <p>
+                    <label for="text">Text:</label>
+                    <br>
+                    <input id="text" type="text" name="text" pattern="[0-9A-Za-z _\-=\x22'()?]{3,}" title="Allowed characters only" required>
+                </p>
+                <p>
+                    <label for="animation-interval">Animation interval in ms:</label>
+                    <br>
+                    <input id="animation-interval" type="number" name="animation-interval" min="0" max="10000" value="1000">
+                </p>
+                <p><input type="submit" value="Update display"></p>
+            </form>
+        </main>
+        <footer>
+            <p>2022 locxter</p>
+        </footer>
+    </body>
+</html>
