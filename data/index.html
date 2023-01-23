@@ -34,12 +34,15 @@
                     <br>
                     <input id="text" type="text" name="text" pattern="[0-9A-Za-z _\-=\x22'()?]{3,}" title="Allowed characters only" required>
                 </p>
+                <p><input type="submit" value="Update text"></p>
+            </form>
+            <form method="post">
                 <p>
                     <label for="animation-interval">Animation interval in ms:</label>
                     <br>
-                    <input id="animation-interval" type="number" name="animation-interval" min="0" max="10000" value="1000">
+                    <input id="animation-interval" type="number" name="animation-interval" min="0" max="10000" value="1000" required>
                 </p>
-                <p><input type="submit" value="Update display"></p>
+                <p><input type="submit" value="Update animation interval"></p>
             </form>
         </main>
         <footer>

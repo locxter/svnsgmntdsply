@@ -208,14 +208,18 @@ void setup() {
         } else {
             File file;
             String content;
-            if (server.method() == HTTP_POST && server.hasArg("text") && server.hasArg("animation-interval")) {
-                isReceiving = true;
-                text = server.arg("text") + " ";
-                animationInterval = server.arg("animation-interval").toInt();
-                saveSettings();
-                lastMillis = currentMillis - animationInterval;
-                textPosition = 0;
-                isReceiving = false;
+            if (server.method() == HTTP_POST) {
+                if (server.hasArg("text")) {
+                    isReceiving = true;
+                    text = server.arg("text") + " ";
+                    saveSettings();
+                    lastMillis = currentMillis - animationInterval;
+                    textPosition = 0;
+                    isReceiving = false;
+                } else if (server.hasArg("animation-interval")) {
+                    animationInterval = server.arg("animation-interval").toInt();
+                    saveSettings();
+                }
             }
             file = LittleFS.open("/index.html", "r");
             while (file.available()) {
