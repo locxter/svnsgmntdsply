@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <title>svnsgmntdsply</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="locxter">
-        <meta name="description" content="This is a simple ESP8266-driven seven-segment display.">
-        <link rel="stylesheet" href="styles/dark.min.css">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="locxter" />
+        <meta name="description" content="This is a simple ESP8266-driven seven-segment display." />
+        <link rel="stylesheet" href="styles/dark.min.css" />
     </head>
     <body>
         <header>
@@ -31,18 +31,37 @@
             <form method="post">
                 <p>
                     <label for="text">Text:</label>
-                    <br>
-                    <input id="text" type="text" name="text" pattern="[0-9A-Za-z _\-=\x22'()?]{3,}" title="Allowed characters only" required>
+                    <br />
+                    <input
+                        id="text"
+                        type="text"
+                        name="text"
+                        pattern="[0-9A-Za-z _\-=\x22'()?]{3,}"
+                        title="Allowed characters only"
+                        required
+                    />
                 </p>
-                <p><input type="submit" value="Update text"></p>
+                <p>
+                    <input type="submit" value="Update text" />
+                </p>
             </form>
             <form method="post">
                 <p>
                     <label for="animation-interval">Animation interval in ms:</label>
-                    <br>
-                    <input id="animation-interval" type="number" name="animation-interval" min="0" max="10000" value="1000" required>
+                    <br />
+                    <input
+                        id="animation-interval"
+                        type="number"
+                        name="animation-interval"
+                        min="0"
+                        max="10000"
+                        value="1000"
+                        required
+                    />
                 </p>
-                <p><input type="submit" value="Update animation interval"></p>
+                <p>
+                    <input type="submit" value="Update animation interval" />
+                </p>
             </form>
         </main>
         <footer>
